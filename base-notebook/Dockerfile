@@ -5,7 +5,7 @@
 # https://github.com/docker-library/official-images/commit/0ea9b38b835ffb656c497783321632ec7f87b60c
 FROM ubuntu@sha256:84c334414e2bfdcae99509a6add166bbb4fa4041dc3fa6af08046a66fed3005f
 
-LABEL maintainer="Jupyter Project <jupyter@googlegroups.com>"
+LABEL maintainer="Scott Lyons <scottalyons@gmail.com>"
 
 USER root
 
@@ -75,6 +75,7 @@ RUN cd /tmp && \
 
 # Install Jupyter Notebook and Hub
 RUN conda install --quiet --yes \
+    python=3.5 \
     'notebook=5.2.*' \
     'jupyterhub=0.8.*' \
     'jupyterlab=0.30.*' \
